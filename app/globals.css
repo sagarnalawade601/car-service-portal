@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-paper text-ink font-body;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display text-ink;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-4 py-2 font-medium transition-colors;
+}
+.btn-primary {
+  @apply btn bg-garage text-white hover:bg-garageDark;
+}
+.btn-outline {
+  @apply btn border border-line text-ink hover:bg-line/40;
+}
+
+.card {
+  @apply rounded-lg border border-line bg-white p-5;
+}
+
+.input {
+  @apply w-full rounded-md border border-line bg-white px-3 py-2 text-ink placeholder:text-steel/60 focus:outline-none focus:ring-2 focus:ring-garage;
+}
+
+.label {
+  @apply mb-1 block text-sm font-medium text-steel;
+}
+
+.badge {
+  @apply inline-block rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
+.badge-pending { @apply badge bg-amber-100 text-amber-800; }
+.badge-confirmed { @apply badge bg-blue-100 text-blue-800; }
+.badge-in_progress { @apply badge bg-purple-100 text-purple-800; }
+.badge-completed { @apply badge bg-green-100 text-green-800; }
+.badge-cancelled { @apply badge bg-red-100 text-red-800; }
